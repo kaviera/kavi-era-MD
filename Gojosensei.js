@@ -3367,7 +3367,7 @@ reply("Success Changing Menu To "+q)
 }
 
                     break
-                     case 'alive': case 'bot':{
+                     case 'alive': case 'notiya':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3427,7 +3427,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
-            case 'list': case 'menu': {
+            case 'noti': case 'menu': {
             	timestampe = speed();
 latensie = speed() - timestampe
                 anu = ``
@@ -3439,7 +3439,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')}, 
                             hydratedFooterText: `
 ┌─❖
-│「 Hi Gys, I Am Alive👋 」
+│「 Hi Gys, I Am Alive 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  Notiya Real Wa Bot
 │└───────────────┈ ⳹
