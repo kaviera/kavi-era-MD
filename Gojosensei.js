@@ -2116,7 +2116,7 @@ break
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
-            case 'ytmp4': case 'getvideo': case 'ytvideo': {
+            case 'video': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
                 let quality = args[1] ? args[1] : '360p'
@@ -3680,7 +3680,7 @@ case 'allmenu': {
 ┃╠${prefix}sell [option]
 ┃╠═✪「 DOWNLOADER 」☯︎
 ┃╠${prefix}ytmp3 [url|quality]
-┃╠${prefix}ytmp4 [url|quality]
+┃╠${prefix}video [url|quality]
 ┃╠${prefix}getmusic [yt link]
 ┃╠${prefix}getvideo [yt link]
 ┃╠${prefix}umma [query]
@@ -3784,8 +3784,8 @@ case 'allmenu': {
 ┃╠ ${prefix}togif [reply stick]
 ┃╠ ${prefix}tourl [reply img]
 ┃╠ ${prefix}tovn [reply aud]
-┃╠ ${prefix}tomp4 [reply vn]
-┃╠ ${prefix}mo4audio [reply vid]
+┃╠ ${prefix}toaud [reply vn]
+┃╠ ${prefix}mp4audio [reply vid]
 ┃╠ ${prefix}ebinary [reply txt]
 ┃╠ ${prefix}dbinary [reply txt]
 ┃╠ ${prefix}styletext [text]
@@ -4030,7 +4030,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 DOWNLOADER 」	        
 ┃╠${prefix}ytmp3 [url|quality]
-┃╠${prefix}ytmp4 [url|quality]
+┃╠${prefix}video [url|quality]
 ┃╠${prefix}getmusic [yt link]
 ┃╠${prefix}getvideo [yt link]
 ┃╠${prefix}umma [query]
@@ -4155,7 +4155,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}togif [reply stick]
 ┃╠ ${prefix}tourl [reply media]
 ┃╠ ${prefix}tovn [reply aud]
-┃╠ ${prefix}tomp4 [reply vn]
+┃╠ ${prefix}toaud [reply vn]
 ┃╠ ${prefix}mp4audio [reply vid]
 ┃╠ ${prefix}ebinary [reply txt]
 ┃╠ ${prefix}dbinary [reply txt]
