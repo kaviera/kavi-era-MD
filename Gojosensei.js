@@ -2029,7 +2029,7 @@ break
 	    })
 	    }
 	    break
-	    case 'yts': case 'ytsearch': {
+	    case 'yt': case 'ytsearch': {
                 if (!text) return replay(`Example : ${prefix + command} Anime Story Whatsapp`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2785,7 +2785,7 @@ break
                 GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'tiktokwmx': case 'tiktokwatermarkx': {
+            case 'tiktok1': case 'tiktokwatermarkx': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
@@ -2803,7 +2803,7 @@ break
                 GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'tiktokmp3x': case 'tiktokaudiox': {
+            case 'tiktokmp3': case 'tiktokaudiox': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
@@ -3310,12 +3310,13 @@ RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
 _NodeJS Memory Usaage_
 ${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}
 
+
 ${cpus[0] ? `_Total CPU Usage_
 ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
                 `.trim()
-                reply(respon)
+                reply(respon)    
             }
             break
             case 'speedtest': {
@@ -3689,7 +3690,7 @@ case 'allmenu': {
 ┃╠══✪「 SEARCHER 」 ☯︎
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
-┃╠${prefix}yts [query]
+┃╠${prefix}yt [query]
 ┃╠${prefix}google [query]
 ┃╠${prefix}gimage [query]
 ┃╠${prefix}pinterest [query]
@@ -3779,7 +3780,7 @@ case 'allmenu': {
 ┃╠═══✪「 CONVERTER 」 ☯︎
 ┃╠ ${prefix}toimage [reply stick]
 ┃╠ ${prefix}sticker [reply img|gif]
-┃╠ ${prefix}emojimix [moji+moji]
+┃╠ ${prefix}emomix [moji+moji]
 ┃╠ ${prefix}tovideo [reply img]
 ┃╠ ${prefix}togif [reply stick]
 ┃╠ ${prefix}tourl [reply img]
@@ -4046,7 +4047,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔══✪「 SEARCHER 」	        
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
-┃╠${prefix}yts [query]
+┃╠${prefix}yt [query]
 ┃╠${prefix}google [query]
 ┃╠${prefix}gimage [query]
 ┃╠${prefix}pinterest [query]
@@ -4150,7 +4151,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔══✪「 CONVERTER 」	        
 ┃╠ ${prefix}toimage [reply stick]
 ┃╠ ${prefix}sticker [reply img|gif]
-┃╠ ${prefix}emojimix [moji+moji]
+┃╠ ${prefix}emomix [moji+moji]
 ┃╠ ${prefix}tovideo [reply img]
 ┃╠ ${prefix}togif [reply stick]
 ┃╠ ${prefix}tourl [reply media]
