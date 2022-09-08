@@ -2029,7 +2029,7 @@ break
 	    })
 	    }
 	    break
-	    case 'yt': case 'ytsearch': {
+	    case 'yts': case 'ytsearch': {
                 if (!text) return replay(`Example : ${prefix + command} Anime Story Whatsapp`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2077,7 +2077,7 @@ break
         })
         }
         break
-	    case 'play': case 'song': case 'ytplay': {
+	    case 'play': case 'yt': case 'ytplay': {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -3680,7 +3680,7 @@ case 'allmenu': {
 ┃╠${prefix}buy [option]
 ┃╠${prefix}sell [option]
 ┃╠═✪「 DOWNLOADER 」☯︎
-┃╠${prefix}ytmp3 [url|quality]
+┃╠${prefix}song [url|quality]
 ┃╠${prefix}video [url|quality]
 ┃╠${prefix}getmusic [yt link]
 ┃╠${prefix}getvideo [yt link]
@@ -3690,7 +3690,7 @@ case 'allmenu': {
 ┃╠══✪「 SEARCHER 」 ☯︎
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
-┃╠${prefix}yt [query]
+┃╠${prefix}yts [query]
 ┃╠${prefix}google [query]
 ┃╠${prefix}gimage [query]
 ┃╠${prefix}pinterest [query]
